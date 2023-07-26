@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRest_WEBBlazor.API", "APIRest_WEBBlazor.API\APIRest_WEBBlazor.API.csproj", "{FB14F250-C8E0-4065-90C9-39648F45563E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB14F250-C8E0-4065-90C9-39648F45563E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB14F250-C8E0-4065-90C9-39648F45563E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB14F250-C8E0-4065-90C9-39648F45563E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB14F250-C8E0-4065-90C9-39648F45563E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA1B4DB8-4F31-45BE-9A96-0B9280F1CAB9}
+	EndGlobalSection
+EndGlobal
