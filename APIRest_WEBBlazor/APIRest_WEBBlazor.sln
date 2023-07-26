@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRest_WEBBlazor.API", "APIRest_WEBBlazor.API\APIRest_WEBBlazor.API.csproj", "{FB14F250-C8E0-4065-90C9-39648F45563E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRest_WEBBlazor.Shared", "APIRest_WEBBlazor.Shared\APIRest_WEBBlazor.Shared.csproj", "{15628D8E-CC69-4E74-A976-EB5308F6F4F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FB14F250-C8E0-4065-90C9-39648F45563E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB14F250-C8E0-4065-90C9-39648F45563E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB14F250-C8E0-4065-90C9-39648F45563E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15628D8E-CC69-4E74-A976-EB5308F6F4F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15628D8E-CC69-4E74-A976-EB5308F6F4F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15628D8E-CC69-4E74-A976-EB5308F6F4F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15628D8E-CC69-4E74-A976-EB5308F6F4F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
