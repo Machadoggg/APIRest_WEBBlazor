@@ -1,0 +1,42 @@
+﻿@page "/customers"
+@inject IRepository repository
+
+@if (Customers is null)
+{
+    <p>Cargando...</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Customer</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Customers)
+            {
+                <tr>
+                    <td>
+                        <a class="btn btn-warning">Editar</a>
+                        <button class="btn btn-danger">Borrar</button>
+                    </td>
+                    <td>
+                        @customer.Name
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>    
+}
+
+@code {
+    public List<Customer>? Customers { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var responseHttp = await repository.Get<List<Customer>>("/api/customers");
+        Customers = responseHttp.Response;
+    }
+}
