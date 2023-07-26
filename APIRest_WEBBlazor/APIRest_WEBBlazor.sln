@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRest_WEBBlazor.API", "AP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRest_WEBBlazor.Shared", "APIRest_WEBBlazor.Shared\APIRest_WEBBlazor.Shared.csproj", "{15628D8E-CC69-4E74-A976-EB5308F6F4F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRest_WEBBlazor.WEB", "APIRest_WEBBlazor.WEB\APIRest_WEBBlazor.WEB.csproj", "{AAD22EB6-A7C2-4466-8031-F6A5D2800DD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{15628D8E-CC69-4E74-A976-EB5308F6F4F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15628D8E-CC69-4E74-A976-EB5308F6F4F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15628D8E-CC69-4E74-A976-EB5308F6F4F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAD22EB6-A7C2-4466-8031-F6A5D2800DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAD22EB6-A7C2-4466-8031-F6A5D2800DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAD22EB6-A7C2-4466-8031-F6A5D2800DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAD22EB6-A7C2-4466-8031-F6A5D2800DD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
