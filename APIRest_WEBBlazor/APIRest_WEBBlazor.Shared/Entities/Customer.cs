@@ -23,6 +23,11 @@ namespace APIRest_WEBBlazor.Shared.Entities
         [MaxLength(100, ErrorMessage = "El campo {0} no puede tener más de {1} caractéres.")]
         public string? LastName { get; set; }
 
+        [Display(Name = "Documento")]
+        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
+        [MaxLength(16, ErrorMessage = "El campo {0} no puede tener más de {1} caractéres.")]
+        public string? Document { get; set; }
+
         [Display(Name = "Correo")]
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         [MaxLength(100, ErrorMessage = "El campo {0} no puede tener más de {1} caractéres.")]

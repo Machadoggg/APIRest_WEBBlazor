@@ -17,7 +17,7 @@ namespace APIRest_WEBBlazor.API.Data
             base.OnModelCreating(modelBuilder);
 
             //Creacion de index
-            modelBuilder.Entity<Customer>().HasIndex(x => x.Name).IsUnique();
+            modelBuilder.Entity<Customer>().HasIndex(x => x.Document).IsUnique();
         }
     }
 }
