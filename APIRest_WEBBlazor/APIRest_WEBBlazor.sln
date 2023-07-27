@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRest_WEBBlazor.API", "APIRest_WEBBlazor.API\APIRest_WEBBlazor.API.csproj", "{FB14F250-C8E0-4065-90C9-39648F45563E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIRest_WEBBlazor.API", "APIRest_WEBBlazor.API\APIRest_WEBBlazor.API.csproj", "{FB14F250-C8E0-4065-90C9-39648F45563E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRest_WEBBlazor.Shared", "APIRest_WEBBlazor.Shared\APIRest_WEBBlazor.Shared.csproj", "{15628D8E-CC69-4E74-A976-EB5308F6F4F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIRest_WEBBlazor.Shared", "APIRest_WEBBlazor.Shared\APIRest_WEBBlazor.Shared.csproj", "{15628D8E-CC69-4E74-A976-EB5308F6F4F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRest_WEBBlazor.WEB", "APIRest_WEBBlazor.WEB\APIRest_WEBBlazor.WEB.csproj", "{AAD22EB6-A7C2-4466-8031-F6A5D2800DD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIRest_WEBBlazor.WEB", "APIRest_WEBBlazor.WEB\APIRest_WEBBlazor.WEB.csproj", "{AAD22EB6-A7C2-4466-8031-F6A5D2800DD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
