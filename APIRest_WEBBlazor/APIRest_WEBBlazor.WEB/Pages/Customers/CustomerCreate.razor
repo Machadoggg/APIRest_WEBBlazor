@@ -14,10 +14,11 @@
 </div>
 <h3>Crear Cliente</h3>
 
-<CustomerForm Customer="customer" OnValidSubmit="Create" ReturnAction="Return"/>
+<CustomerForm @ref="customerForm" Customer="customer" OnValidSubmit="Create" ReturnAction="Return" />
 
 @code {
     private Customer customer = new();
+    private CustomerForm? customerForm;
 
     private async Task Create()
     {
@@ -28,6 +29,8 @@
             await sweetAlertService.FireAsync("Error", message);
             return;
         }
+
+        customerForm!.FormPostedSuccessfully = true;
         navigationManager.NavigateTo("/customers");
     }
 

@@ -1,4 +1,8 @@
-﻿<EditForm Model="Customer" OnValidSubmit="OnValidSubmit">
+﻿@inject SweetAlertService sweetAlertService
+
+<NavigationLock OnBeforeInternalNavigation="OnBeforeInternalNavigation" />
+
+<EditForm EditContext="editContext" OnValidSubmit="OnValidSubmit">
     <DataAnnotationsValidator />
     <div class="card border border-primary mt-5">
         <div class="card-body">
@@ -46,6 +50,8 @@
 </EditForm>
 
 @code {
+    private EditContext editContext = null!;
+
     [Parameter]
     [EditorRequired]
     public Customer Customer { get; set; } = null!;
@@ -57,4 +63,40 @@
     [Parameter]
     [EditorRequired]
     public EventCallback ReturnAction { get; set; }
+
+    public bool FormPostedSuccessfully { get; set; }
+
+
+    protected override void OnInitialized()
+    {
+        editContext = new(Customer);
+    }
+
+
+    private async Task OnBeforeInternalNavigation(LocationChangingContext context)
+    {
+        var formWasModified = editContext.IsModified();
+        if (!formWasModified || FormPostedSuccessfully)
+        {
+            return;
+        }
+
+        var result = await sweetAlertService.FireAsync(new SweetAlertOptions
+            {
+                Title = "Confirmación",
+                Text = "¿Deseas abandonar la pagina y perder los cambios?",
+                Icon = SweetAlertIcon.Warning,
+                ShowCancelButton = true,
+                CancelButtonText = "No",
+                ConfirmButtonText = "Sí"
+            });
+
+        var confirm = !string.IsNullOrEmpty(result.Value);
+        if (confirm)
+        {
+            return;
+        }
+
+        context.PreventNavigation();
+    }
 }
