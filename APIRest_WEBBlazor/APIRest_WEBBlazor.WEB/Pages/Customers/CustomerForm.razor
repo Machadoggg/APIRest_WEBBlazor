@@ -1,0 +1,60 @@
+﻿<EditForm Model="Customer" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <div class="card border border-primary mt-5">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <label>NOMBRE:</label>
+                    <InputText class="form-control" @bind-Value="@Customer.Name" />
+                    <ValidationMessage For="@(() => Customer.Name)" />
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <label>APELLIDO:</label>
+                    <InputText class="form-control" @bind-Value="@Customer.LastName" />
+                    <ValidationMessage For="@(() => Customer.LastName)" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <label>DOCUMENTO:</label>
+                    <InputText class="form-control" @bind-Value="@Customer.Document" />
+                    <ValidationMessage For="@(() => Customer.Document)" />
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <label>CORREO:</label>
+                    <InputText class="form-control" @bind-Value="@Customer.Email" />
+                    <ValidationMessage For="@(() => Customer.Email)" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <label>PASSWORD:</label>
+                    <InputText class="form-control" @bind-Value="@Customer.Password" />
+                    <ValidationMessage For="@(() => Customer.Password)" />
+                </div>
+                <div class="col-sm-6 mb-3 mt-4">
+                    <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5">
+        <button class="btn btn-success" @onclick="ReturnAction">Regresar</button>
+    </div>
+</EditForm>
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public Customer Customer { get; set; } = null!;
+
+    [Parameter]
+    [EditorRequired]
+    public EventCallback OnValidSubmit { get; set; }
+
+    [Parameter]
+    [EditorRequired]
+    public EventCallback ReturnAction { get; set; }
+}

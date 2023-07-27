@@ -1,0 +1,38 @@
+﻿@page "/customers/create"
+@inject IRepository repository
+@inject NavigationManager navigationManager
+@inject SweetAlertService sweetAlertService
+
+<div class="row">
+    <div class="col-12">
+        <ol class="breadcrumb float-end pt-0" style="background-color:#F4F6F9">
+            <li class="breadcrumb-item"><a href="#">Menú</a></li>
+            <li class="breadcrumb-item"><a href="customers">Lista Clientes</a></li>
+            <li class="breadcrumb-item active">Crear Cliente</li>
+        </ol>
+    </div>
+</div>
+<h3>Crear Cliente</h3>
+
+<CustomerForm Customer="customer" OnValidSubmit="Create" ReturnAction="Return"/>
+
+@code {
+    private Customer customer = new();
+
+    private async Task Create()
+    {
+        var httpResponse = await repository.Post("/api/customers", customer);
+        if(httpResponse.Error)
+        {
+            var message = await httpResponse.GetErrorMessageAsync();
+            await sweetAlertService.FireAsync("Error", message);
+            return;
+        }
+        navigationManager.NavigateTo("/customers");
+    }
+
+    private void Return()
+    {
+        navigationManager.NavigateTo("/customers");
+    }
+}

@@ -2,7 +2,28 @@
 @using MudBlazor
 @inject IRepository repository
 
-<h3>Lista Clientes</h3>
+<div class="row">
+    <div class="col-12">
+        <ol class="breadcrumb float-end pt-0" style="background-color:#F4F6F9">
+            <li class="breadcrumb-item"><a href="#">Menú</a></li>
+            <li class="breadcrumb-item"><a href="customers">Lista Clientes</a></li>
+            @*<li class="breadcrumb-item active">Afiliados</li>*@
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <h4 class="float-left">Lista Clientes</h4>
+    </div>
+    <div class="col-6">
+        <a class="btn btn-primary mb-3 float-end" href="/customers/create">Crear Cliente</a>
+    </div>
+</div>
+
+
+
+
+
 
 <GenericList MyList="Customers">
     <Body>
